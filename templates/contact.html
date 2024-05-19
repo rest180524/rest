@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% endblock title %}
+{% block header %}{% endblock header %} 
+{% block content %}
+<div class="div-width-100-text-center">
+	<h3>{% trans "contacts" %}</h3>
+</div>
+<div class="row">
+	<div class="col-md-3">
+		<h3 align="center">ALAKOL</h3>
+		{% if LANGUAGE_CODE == 'kk' %}
+			<p>Жетісу облысы, Ақши ауылы</p>
+		{% else %}
+			<p>Жетысуская область, пос. Акши</p>		
+		{% endif %}		
+		<address>
+			<a href="mailto:office@alakol.kz">office@alakol.kz</a>						
+		</address>				
+		<p><a href="tel:+77011234567">+7 701 123 4567</a><p>	
+	</div>
+	<div class="col-md-9" style="position:relative;overflow:hidden;">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11095.967068909755!2d81.54857393986917!3d45.951447515753955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4284a10c423e97ff%3A0xf3cde2452a3fd845!2z0JDQutGI0Lg!5e0!3m2!1sru!2skz!4v1683775073504!5m2!1sru!2skz" width="100%" height="500px" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+	</div>
+</div>
+{% endblock content %}

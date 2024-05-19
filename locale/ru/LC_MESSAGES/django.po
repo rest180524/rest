@@ -1,0 +1,476 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-12 10:31+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%"
+"10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%"
+"100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\center\forms.py:48 .\center\models.py:37 .\center\models.py:76
+#: .\templates\claim\read.html:24 .\templates\kind\index.html:12
+#: .\templates\room\index.html:12
+msgid "kind_title"
+msgstr "Тип комнаты"
+
+#: .\center\forms.py:74 .\templates\room\create.html:6
+#: .\templates\room\edit.html:6 .\templates\room\read.html:7
+msgid "room"
+msgstr "Номер"
+
+#: .\center\forms.py:124
+msgid "Wrong date and time format"
+msgstr "Неправильный формат даты и времени"
+
+#: .\center\models.py:55 .\center\models.py:77 .\templates\cabinet.html:24
+#: .\templates\cabinet.html:65 .\templates\claim\index.html:14
+#: .\templates\claim\read.html:25 .\templates\reviews\index.html:13
+#: .\templates\room\index.html:13
+msgid "room_title"
+msgstr "Индекс номера"
+
+#: .\center\models.py:56 .\center\models.py:78 .\templates\room\list.html:70
+#: .\templates\room\read.html:18
+msgid "floor"
+msgstr "Этаж"
+
+#: .\center\models.py:57 .\center\models.py:79
+msgid "room_details"
+msgstr "Описание номера"
+
+#: .\center\models.py:58 .\center\models.py:80
+msgid "room_photo"
+msgstr "Фотография"
+
+#: .\center\models.py:59 .\center\models.py:81 .\templates\claim\create.html:9
+#: .\templates\claim\edit.html:9 .\templates\claim\read.html:26
+#: .\templates\price.html:4 .\templates\price.html:10
+#: .\templates\reviews\create.html:9 .\templates\room\index.html:14
+#: .\templates\room\list.html:141 .\templates\room\read.html:79
+msgid "price"
+msgstr "Стоимость проживания за сутки"
+
+#: .\center\models.py:75
+msgid "kind_id"
+msgstr ""
+
+#: .\center\models.py:82
+msgid "avg_rating"
+msgstr "Средняя оценка"
+
+#: .\center\models.py:102
+msgid "datec_claim"
+msgstr "Дата заявки"
+
+#: .\center\models.py:105
+msgid "start"
+msgstr "Дата заезда"
+
+#: .\center\models.py:106
+msgid "finish"
+msgstr "Дата выезда"
+
+#: .\center\models.py:107 .\templates\claim\read.html:20
+msgid "claim_details"
+msgstr "Детали заявки"
+
+#: .\center\models.py:108 .\templates\cabinet.html:26
+#: .\templates\claim\index.html:16 .\templates\claim\read.html:21
+msgid "claim_result"
+msgstr "Результат рассотрения заявки"
+
+#: .\center\models.py:122
+msgid "dater_reviews"
+msgstr "Дата"
+
+#: .\center\models.py:124
+msgid "rating"
+msgstr "Оценка"
+
+#: .\center\models.py:125
+msgid "details_reviews"
+msgstr "Текст отзыва"
+
+#: .\center\models.py:140 .\templates\news\index.html:12
+msgid "daten"
+msgstr "Дата"
+
+#: .\center\models.py:141
+msgid "title_news"
+msgstr "Заголовок новости"
+
+#: .\center\models.py:142
+msgid "details_news"
+msgstr "Детали новости"
+
+#: .\center\models.py:143
+msgid "photo_news"
+msgstr "Фотография"
+
+#: .\templates\base.html:36
+msgid "Home"
+msgstr "Главная"
+
+#: .\templates\base.html:43 .\templates\base.html:71
+#: .\templates\index.html:106 .\templates\room\index.html:3
+#: .\templates\room\index.html:6 .\templates\room\list.html:4
+#: .\templates\room\list.html:8
+msgid "rooms"
+msgstr "Номера"
+
+#: .\templates\base.html:46 .\templates\services.html:4
+#: .\templates\services.html:10
+msgid "services"
+msgstr "Услуги"
+
+#: .\templates\base.html:49
+msgid "price_list"
+msgstr "Прайс-лист"
+
+#: .\templates\base.html:52 .\templates\photogallery.html:4
+#: .\templates\photogallery.html:28
+msgid "photogallery"
+msgstr "Фотогалерея"
+
+#: .\templates\base.html:55 .\templates\base.html:76
+#: .\templates\index.html:200 .\templates\news\index.html:3
+#: .\templates\news\index.html:6 .\templates\news\list.html:4
+#: .\templates\news\list.html:8
+msgid "newss"
+msgstr "Новости"
+
+#: .\templates\base.html:58 .\templates\contact.html:7
+msgid "contacts"
+msgstr "Контакты"
+
+#: .\templates\base.html:62 .\templates\cabinet.html:7
+msgid "cabinet"
+msgstr "Личный кабинет"
+
+#: .\templates\base.html:70 .\templates\kind\index.html:3
+#: .\templates\kind\index.html:6 .\templates\room\list.html:20
+msgid "kinds"
+msgstr "Типы номеров"
+
+#: .\templates\base.html:73 .\templates\cabinet.html:16
+#: .\templates\claim\index.html:3 .\templates\claim\index.html:6
+msgid "claims"
+msgstr "Заявки"
+
+#: .\templates\base.html:74 .\templates\index.html:178
+#: .\templates\reviews\index.html:4 .\templates\reviews\list.html:4
+msgid "reviewss"
+msgstr "Отзывы"
+
+#: .\templates\base.html:81 .\templates\cabinet.html:12
+#: .\templates\registration\my_account.html:4
+#: .\templates\registration\my_account.html:10
+msgid "My account"
+msgstr "Мой аккаунт"
+
+#: .\templates\base.html:82 .\templates\cabinet.html:14
+#: .\templates\registration\password_change_form.html:9
+#: .\templates\registration\password_change_form.html:15
+msgid "Change password"
+msgstr "Поменять пароль"
+
+#: .\templates\base.html:84
+msgid "Log out"
+msgstr "Выход"
+
+#: .\templates\base.html:89
+msgid "Log In"
+msgstr "Вход"
+
+#: .\templates\base.html:90 .\templates\registration\signup.html:4
+#: .\templates\registration\signup.html:10
+msgid "Sign up"
+msgstr "Регистрация"
+
+#: .\templates\cabinet.html:22 .\templates\claim\index.html:12
+#: .\templates\claim\read.html:11
+msgid "datec"
+msgstr "Дата заявки"
+
+#: .\templates\cabinet.html:23 .\templates\claim\index.html:13
+#: .\templates\reviews\index.html:16
+msgid "user"
+msgstr "Пользователь"
+
+#: .\templates\cabinet.html:25 .\templates\claim\index.html:15
+#: .\templates\claim\read.html:19
+msgid "date"
+msgstr "Дата"
+
+#: .\templates\cabinet.html:50
+msgid "reviews create"
+msgstr "Добавить отзыв"
+
+#: .\templates\cabinet.html:59 .\templates\reviews\create.html:6
+#: .\templates\reviews\index.html:7 .\templates\reviews\list.html:8
+#: .\templates\room\read.html:86
+msgid "reviews"
+msgstr "Отзывы"
+
+#: .\templates\cabinet.html:66 .\templates\reviews\index.html:14
+#: .\templates\room\list.html:28
+msgid "details"
+msgstr "Детали"
+
+#: .\templates\cabinet.html:67 .\templates\reviews\index.html:15
+msgid "dater"
+msgstr "Дата"
+
+#: .\templates\claim\create.html:3 .\templates\claim\index.html:51
+#: .\templates\kind\create.html:3 .\templates\kind\index.html:14
+#: .\templates\kind\index.html:34 .\templates\news\create.html:3
+#: .\templates\news\index.html:15 .\templates\news\index.html:45
+#: .\templates\reviews\create.html:3 .\templates\room\create.html:3
+#: .\templates\room\index.html:16 .\templates\room\index.html:42
+msgid "Create"
+msgstr "Создать"
+
+#: .\templates\claim\create.html:6 .\templates\claim\edit.html:6
+#: .\templates\claim\read.html:7
+msgid "claim"
+msgstr "Заявка"
+
+#: .\templates\claim\create.html:16 .\templates\claim\edit.html:19
+#: .\templates\kind\create.html:13 .\templates\kind\edit.html:13
+#: .\templates\news\create.html:13 .\templates\news\edit.html:13
+#: .\templates\reviews\create.html:16 .\templates\room\create.html:13
+#: .\templates\room\edit.html:13
+msgid "Save"
+msgstr "Сохранить"
+
+#: .\templates\claim\create.html:17 .\templates\claim\edit.html:20
+#: .\templates\claim\read.html:34 .\templates\kind\create.html:14
+#: .\templates\kind\edit.html:14 .\templates\kind\read.html:22
+#: .\templates\news\create.html:14 .\templates\news\edit.html:14
+#: .\templates\news\read.html:45 .\templates\reviews\create.html:17
+#: .\templates\room\create.html:14 .\templates\room\edit.html:14
+#: .\templates\room\read.html:82
+msgid "Back"
+msgstr "Назад"
+
+#: .\templates\claim\edit.html:3 .\templates\claim\index.html:41
+#: .\templates\kind\edit.html:3 .\templates\kind\index.html:24
+#: .\templates\news\edit.html:3 .\templates\news\index.html:35
+#: .\templates\room\edit.html:3 .\templates\room\index.html:32
+msgid "Change"
+msgstr "Изменить"
+
+#: .\templates\claim\edit.html:11
+msgid "users"
+msgstr "Пользователи"
+
+#: .\templates\claim\index.html:42 .\templates\kind\index.html:25
+#: .\templates\news\index.html:36 .\templates\room\index.html:33
+msgid "View"
+msgstr "Просмотреть"
+
+#: .\templates\claim\index.html:43 .\templates\kind\index.html:26
+#: .\templates\news\index.html:37 .\templates\reviews\index.html:38
+#: .\templates\room\index.html:34
+msgid "Delete"
+msgstr "Удалить"
+
+#: .\templates\claim\read.html:4 .\templates\kind\read.html:4
+#: .\templates\news\read.html:4 .\templates\room\read.html:4
+msgid "Read"
+msgstr "Просмотреть"
+
+#: .\templates\index.html:4
+msgid "App name"
+msgstr "ALACOL"
+
+#: .\templates\index.html:173
+msgid "all rooms"
+msgstr "Все номера"
+
+#: .\templates\index.html:187
+msgid "Rating"
+msgstr "Оценка"
+
+#: .\templates\index.html:194
+msgid "all reviews"
+msgstr "Все отзывы"
+
+#: .\templates\index.html:245
+msgid "all newss"
+msgstr "Все новости"
+
+#: .\templates\kind\create.html:6 .\templates\kind\edit.html:6
+#: .\templates\kind\read.html:7
+msgid "kind"
+msgstr "Тип номера"
+
+#: .\templates\news\create.html:6 .\templates\news\edit.html:6
+#: .\templates\news\read.html:7
+msgid "news"
+msgstr "Новость"
+
+#: .\templates\news\index.html:13
+msgid "title"
+msgstr "Заголовок"
+
+#: .\templates\registration\logged_out.html:4
+#: .\templates\registration\login.html:4
+#: .\templates\registration\password_change_done.html:3
+#: .\templates\registration\password_change_form.html:3
+#: .\templates\registration\password_reset_complete.html:4
+#: .\templates\registration\password_reset_confirm.html:4
+#: .\templates\registration\password_reset_done.html:4
+#: .\templates\registration\password_reset_form.html:4
+#: .\templates\registration\register_done.html:4
+msgid "App Name"
+msgstr "ALACOL"
+
+#: .\templates\registration\logged_out.html:6
+msgid "Logged out!"
+msgstr "Выход из системы!"
+
+#: .\templates\registration\logged_out.html:7
+msgid "Login again"
+msgstr "Войдите в систему еще раз"
+
+#: .\templates\registration\login.html:7
+msgid "Incorrect login or password"
+msgstr "Неверный логин или пароль"
+
+#: .\templates\registration\login.html:12
+msgid "You dont have access"
+msgstr "У вас нет доступа"
+
+#: .\templates\registration\login.html:14
+msgid "Login to see this page"
+msgstr "Войдите в систему, чтобы увидеть эту страницу"
+
+#: .\templates\registration\login.html:22
+msgid "Authorization"
+msgstr "Авторизация"
+
+#: .\templates\registration\login.html:27
+msgid "Login"
+msgstr "Вход"
+
+#: .\templates\registration\login.html:33
+msgid "Lost password?"
+msgstr "Забыли пароль?"
+
+#: .\templates\registration\login.html:34
+#: .\templates\registration\signup.html:15
+msgid "Create an account"
+msgstr "Создать учетную запись"
+
+#: .\templates\registration\my_account.html:15
+msgid "Save changes"
+msgstr "Сохранить изменения"
+
+#: .\templates\registration\password_change_done.html:5
+msgid "Password changed"
+msgstr "Пароль изменен"
+
+#: .\templates\registration\password_reset_complete.html:6
+msgid "Password reset completed!"
+msgstr "Сброс пароля завершен!"
+
+#: .\templates\registration\password_reset_complete.html:7
+msgid "Log in again?"
+msgstr "Снова войти в систему?"
+
+#: .\templates\registration\password_reset_confirm.html:5
+#: .\templates\registration\password_reset_confirm.html:12
+msgid "Password reset confirmation"
+msgstr "Подтверждение сброса пароля"
+
+#: .\templates\registration\password_reset_confirm.html:18
+#: .\templates\registration\password_reset_form.html:10
+#: .\templates\registration\password_reset_form.html:16
+msgid "Reset password"
+msgstr "Сброс пароля"
+
+#: .\templates\registration\password_reset_confirm.html:26
+msgid "Please enter (and confirm) your new password."
+msgstr "Пожалуйста, введите (и подтвердите) свой новый пароль."
+
+#: .\templates\registration\password_reset_confirm.html:32
+msgid "New password:"
+msgstr "Новый пароль:"
+
+#: .\templates\registration\password_reset_confirm.html:37
+msgid "Confirm password:"
+msgstr "Подтвердите пароль:"
+
+#: .\templates\registration\password_reset_confirm.html:48
+msgid "Password reset failed"
+msgstr "Сбой сброса пароля"
+
+#: .\templates\registration\password_reset_confirm.html:49
+msgid ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+msgstr ""
+"Ссылка для сброса пароля была недействительной, возможно, потому, что она "
+"уже была - использованный. Пожалуйста, запросите сброс нового пароля."
+
+#: .\templates\registration\password_reset_done.html:6
+msgid "Password reset"
+msgstr "Сброс пароля"
+
+#: .\templates\registration\password_reset_done.html:7
+msgid "Check your email"
+msgstr "Проверьте свою электронную почту"
+
+#: .\templates\registration\password_reset_email.html:2
+msgid "Asked password reset email"
+msgstr "Запрошен пароль для сброса по электронной почте"
+
+#: .\templates\registration\password_reset_email.html:2
+msgid "Follow the link below:"
+msgstr "Перейдите по ссылке ниже:"
+
+#: .\templates\registration\register_done.html:10
+msgid "Welcome"
+msgstr "Добро пожаловать"
+
+#: .\templates\registration\register_done.html:11
+msgid "Your account has been successfully created."
+msgstr "Ваша учетная запись была успешно создана."
+
+#: .\templates\registration\register_done.html:11
+#: .\templates\registration\signup.html:20
+msgid "Log in"
+msgstr "Войти"
+
+#: .\templates\registration\signup.html:20
+msgid "Already have an account?"
+msgstr "У вас уже есть учетная запись?"
+
+#: .\templates\room\list.html:36
+msgid "Search"
+msgstr "Поиск"
+
+#: .\templates\room\list.html:37
+msgid "Reset"
+msgstr "Сброс"
+
+#: .\templates\room\list.html:74
+msgid "Apply"
+msgstr "Отправить заявку"
+
+#: .\templates\room\read.html:106
+msgid "No reviews yet"
+msgstr "Отзывов пока нет"

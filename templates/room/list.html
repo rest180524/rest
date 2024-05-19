@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "rooms" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<div class="div-width-100-text-center">
+	<h3>{% trans "rooms" %}</h3>
+</div>
+
+
+<div class="row" style="margin: 10px">
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<div class="row">
+			<table>
+				<tbody>
+					<tr>
+						<td>
+							<p>{% trans "kinds" %}</p>
+						</td>
+						<td>
+							<input class="form-control mr-sm-2" type="search" value="{{kinds_search}}" name="kinds_search" style="width: 200px">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p>{% trans "details" %}</p>
+						</td>
+						<td>
+							<input class="form-control mr-sm-2" type="search" value="{{details_search}}" name="details_search" style="width: 200px">
+						</td>
+					</tr>					
+					<tr>
+						<td>
+							<button class="btn btn-outline-success" name="searchBtn" style="width:100px">{% trans "Search" %}</button>
+							<button class="btn btn-outline-primary" name="resetBtn" type="submit" onClick="window.location.reload();" style="width:100px">{% trans "Reset" %}</button>
+						</td>
+						<td>
+
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</form>
+</div>
+<hr>
+{% if room.count > 0 %}
+<div class="row">
+	<table id="myTable" style="width:100%">
+		<thead>
+			<tr>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in room %}
+			<tr>
+				<td>
+					<div class="card">
+						<div class="card-header">
+							<h5>{{ n.kind }}</h5>
+							<h4><a href="{% url 'room_read' n.id %}">{{ n.title }}</a></h4>
+						</div>
+						<div class="card-body">
+							<div class="row">
+								<div class="col-md-8">
+									<p>{{ n.details }}</p>
+									<p><strong>{% trans "floor" %}</strong>: {{ n.floor }}<p>
+									{% if user.is_authenticated %}
+										<form method="post">
+											{% csrf_token %}
+											<button type="submit" name="btn{{ n.id }}" id="btn_id{{ n.id }}" class="btn btn-outline-success" >{% trans "Apply" %}</button>
+											<input hidden type="text" name="room_id" size="0" value="{{ n.id }}">
+											<input hidden type="text" name="price" size="0" value="{{ n.price }}">
+											<input hidden type="text" name="user" size="0" value="{{ user.id }}">
+										</form>
+									{% endif %}
+
+								</div>
+								<div class="col-md-4">
+									{% if n.photo.url != None %}
+										<img style="width:100%; max-width:400px;" src="{{ n.photo.url}}" alt="{{ n.title }}" title="{{ n.details }}">
+									{% endif %}
+									<p><div class="Stars" style='--rating: {{ n.avg_rating| stringformat:".1f" }};'></div></p>							
+								</div>
+							</div>
+						</div>
+						<div class="card-footer text-muted">
+							<p><strong>{% trans "price" %}</strong>: {{ n.price }}<p>
+						</div>
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+<script type="text/javascript">
+	$(".chosen").chosen();
+</script>
+{% endblock content %}

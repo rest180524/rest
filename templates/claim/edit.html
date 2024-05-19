@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Change" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "claim" %}</h2>
+<h3>{{ claim.hotel }}</h3>	
+<p>{{ claim.hotel.details }}</p>	
+<h5>{% trans "price" %}: {{ claim.hotel.price }}</h5>
+<p>{{ claim.start  | date:"d.m.Y" }}-{{ claim.finish  | date:"d.m.Y" }}</p>	
+<h5>{% trans "users" %}: {{ claim.user.last_name }} {{ claim.user.first_name }} ({{ claim.user }})</h5>
+
+<form method="POST" enctype="multipart/form-data" novalidate>	
+	{% csrf_token %}
+	<table>
+        {{ form.as_p }}
+    </table>
+	<br>
+    <button type="submit" class="btn btn-outline-success" style="width:100px">{% trans "Save" %}</button>
+	<a class="btn btn-outline-info" style="width:100px" href="{% url 'claim_index' %}">{% trans "Back" %}</a>    
+</form>
+<script type="text/javascript">
+	$(".chosen").chosen();
+</script>
+{% endblock content %}

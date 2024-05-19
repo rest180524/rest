@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% endblock title %}
+{% block header %}{% endblock header %} 
+{% block content %}
+<div class="div-width-100-text-center">
+	<h3>{% trans "cabinet" %}</h3>
+</div>
+<br>
+<h2>{{ user_info }}</h2>
+<hr>
+<a href="{% url 'my_account' %}">{% trans "My account" %}</a>
+<hr>
+<a href="{% url 'password_change' %}">{% trans "Change password" %}</a>
+<hr>
+<h2>{% trans "claims" %}</h2>
+{% if claim.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "datec" %}</th>
+				<th>{% trans "user" %}</th>
+				<th>{% trans "room_title" %}</th>
+				<th>{% trans "date" %}</th>
+				<th>{% trans "claim_result" %}</th>
+				<th></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in claim %}
+			<tr>
+				<td>
+					<p>{{ n.datec  | date:"d.m.Y" }}</p>	
+				</td>
+				<td>
+					<p>{{ n.user.last_name }} {{ n.user.first_name }}</p>	
+				</td>
+				<td>
+					<p>{{ n.room.kind }}</p>	
+					<p>{{ n.room.title }}</p>	
+				</td>
+				<td>
+					<p>{{ n.start  | date:"d.m.Y" }}-{{ n.finish  | date:"d.m.Y" }}</p>	
+				</td>
+				<td>
+					<p>{{ n.result }}</p>	
+				</td>
+				<td>
+					<a href="{% url 'reviews_create' n.room_id %}">{% trans "reviews create" %}</a>					
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+<hr>
+<h2>{% trans "reviews" %}</h2>
+{% if reviews.count > 0 %}
+<div class="row">
+	<table id="myTable2" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th><p>{% trans "room_title" %}</p></th>
+				<th><p>{% trans "details" %}</p></th>
+				<th><p>{% trans "dater" %}</p></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in reviews %}
+			<tr>
+				<td>
+					<p>{{ n.room.kind }}</p>						
+					<p>{{ n.room.title }}</p>						
+				</td>				
+				<td>
+					<div class="Stars" style='--rating: {{ n.rating | stringformat:".1f" }};'></div>
+					<p>{{ n.details }}</p>						
+				</td>
+				<td>
+					<p>{{ n.dater | date:"d.m.Y H:i"}}</p>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% endif %}
+
+{% endblock content %}

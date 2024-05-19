@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "Create" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "reviews" %}</h2>
+<h3>{{ room }}</h3>	
+<p>{{ room.details }}</p>	
+<h5>{% trans "price" %}: {{ room.price }}</h5>	
+<form method="POST" enctype="multipart/form-data">
+	{% csrf_token %}
+    <table>
+        {{  form.as_table }}
+    </table>
+	<div class="div-button-left">
+		<button type="submit" class="btn btn-outline-success" style="width:100px;  margin-top:5px">{% trans "Save" %}</button>	
+		<a class="btn btn-outline-info" style="width:100px; margin-top:5px" onclick="history.back()">{% trans "Back" %}</a>    	
+	</div>
+</form>
+<script type="text/javascript">
+	$(".chosen").chosen();
+</script>
+{% endblock content %}

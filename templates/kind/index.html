@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "kinds" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "kinds" %}</h2>
+{% if kind.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "kind_title" %}</th>
+				<!--<th></th>-->
+				<th><a href="{% url 'kind_create'%}">{% trans "Create" %}</a></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in kind %}
+			<tr>
+				<td>
+					<p>{{ n.title }}</p>	
+				</td>
+				<td>
+					<a href="{% url 'kind_edit' n.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'kind_read' n.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'kind_delete' n.id %}">{% trans "Delete" %}</a>
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<a href="{% url 'kind_create'%}">{% trans "Create" %}</a>
+{% endif %}
+{% endblock content %}

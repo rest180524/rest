@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block title %}{% trans "rooms" %}{% endblock title %}
+{% block header %}{% endblock header %}
+{% block content %}
+<h2>{% trans "rooms" %}</h2>
+{% if room.count > 0 %}
+<div class="row">
+	<table id="myTable" class="table-manager" style="width:100%">
+		<thead>
+			<tr>
+				<th>{% trans "kind_title" %}</th>
+				<th>{% trans "room_title" %}</th>
+				<th>{% trans "price" %}</th>
+				<!--<th></th>-->
+				<th><a href="{% url 'room_create'%}">{% trans "Create" %}</a></th>				
+			</tr>
+		</thead>
+		<tbody>
+			{% for n in room %}
+			<tr>
+				<td>
+					<p>{{ n.kind }}</p>	
+				</td>
+				<td>
+					<p>{{ n.title }}</p>	
+				</td>
+				<td>
+					<p>{{ n.price }}</p>	
+				</td>
+				<td>
+					<a href="{% url 'room_edit' n.id %}">{% trans "Change" %}</a> |
+					<a href="{% url 'room_read' n.id %}">{% trans "View" %}</a> |
+					<a onclick="return confirm('Удалить запись?')" href="{% url 'room_delete' n.id %}">{% trans "Delete" %}</a>
+				</td>			
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+{% else %}
+<a href="{% url 'room_create'%}">{% trans "Create" %}</a>
+{% endif %}
+{% endblock content %}
