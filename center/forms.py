@@ -88,7 +88,7 @@ class ClaimFormEdit(forms.ModelForm):
             'result': Textarea(attrs={'cols': 100, 'rows': 10}),                        
         }
         labels = {
-            'result': _('result'),            
+            'result': _('claim_result'),            
         }
 
 class ReviewsForm(forms.ModelForm):
