@@ -61,9 +61,9 @@
 						<li class="nav-item">
 							<a class="nav-link" href="{% url 'cabinet' %}">{% trans "cabinet" %}</a>
 						</li>
-						<li class="nav-link dropdown">
-							<a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-							{{ user.username }} 
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								{{ user.username }} 
 							</a>
 							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 								{% if request.user.groups.all.0.name == "Managers"  %}
